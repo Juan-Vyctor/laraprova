@@ -1,9 +1,11 @@
 <a href="{{route('cadastro')}}">Voltar</a>
-@foreach ($imoveis as $item)
-    <h1>Local: {{$item->localizacao}}</h1>  
-    <h1>Valor: {{$item->valor}}</h1>  
-    <h1>Número de quartos: {{$item->numero_quartos}}</h1>
-    @if ($item->piscina == 1)
+
+@foreach ($imoveis as $imovel)
+    <h1>Usuario dono do imóvel: {{$usuario->name}}</h1>
+    <h1>Local: {{$imovel->localizacao}}</h1>
+    <h1>Valor: {{$imovel->valor}}</h1> 
+    <h1>Número de quartos: {{$imovel->numero_quartos}}</h1>
+    @if ($imovel->piscina == 1)
         <h1>Esse imóvel tem piscina</h1>
     @endif
     <br>

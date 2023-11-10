@@ -21,11 +21,11 @@ Route::get('/', function () {
 });
 
 Route::get('/cadastro', [UserController::class,'cadastro'])->name('cadastro');
-Route::post('/login', [UserController::class,'login'])->name('login');
 Route::post('/register', [UserController::class, 'auth'])->name('register');
+Route::post('/login', [UserController::class,'login'])->name('login');
 
 Route::get('/automovel', [AutomovelController::class, 'create'])->name('automovel');
-Route::post('/automovel', [AutomovelController::class, 'store'])->name('register.imovel');
+Route::post('/automovel', [AutomovelController::class, 'store'])->name('register.automovel');
 
 Route::get('/imovel', [ImovelController::class, 'create'])->name('imovel');
 Route::post('/imovel', [ImovelController::class,'store'])->name('register.imovel');
